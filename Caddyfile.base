@@ -28,7 +28,7 @@
 		}
 	}
 
-	root * public/
+	root * /home/container/public/
 	encode zstd gzip
 
 	# Uncomment the following lines to enable Mercure and Vulcain modules
