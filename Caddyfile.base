@@ -11,6 +11,8 @@
 	order vulcain after reverse_proxy
 	order php_server before file_server
 	order php before file_server
+
+	http_port {$SERVER_PORT}
 }
 
 {$CADDY_EXTRA_CONFIG}
