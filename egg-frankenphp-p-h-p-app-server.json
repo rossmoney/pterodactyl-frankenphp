@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2024-02-21T14:17:50+00:00",
+    "exported_at": "2024-02-21T14:20:21+00:00",
     "name": "Frankenphp PHP App Server",
     "author": "unknown@unknown.com",
     "description": null,
@@ -13,7 +13,7 @@
         "ghcr.io\/rossmoney\/pterodactyl-frankenphp:main": "ghcr.io\/rossmoney\/pterodactyl-frankenphp:main"
     },
     "file_denylist": [],
-    "startup": ".\/frankenphp-linux-x86_64 run --config \/home\/container\/Caddyfile --adapter caddyfile",
+    "startup": ".\/frankenphp run --config \/home\/container\/Caddyfile --adapter caddyfile",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"serving initial configuration\"\r\n}",
