@@ -17,8 +17,6 @@ RUN chmod +x /entrypoint.sh
 USER container
 
 RUN \
-	# Use "adduser -D ${USER}" for alpine based distros
-	useradd -D ${USER}; \
 	# Add additional capability to bind to port 80 and 443
 	setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/frankenphp;
  
