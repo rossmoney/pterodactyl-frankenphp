@@ -14,9 +14,13 @@ COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-#USER container
-#ENV USER container
-#ENV HOME /home/container
+COPY /usr/local/bin/frankenphp /home/container/frankenphp
+
+RUN chmod +x /home/container/frankenphp
+
+USER container
+ENV USER container
+ENV HOME /home/container
 
 WORKDIR /home/container
 
