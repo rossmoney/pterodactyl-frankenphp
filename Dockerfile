@@ -9,15 +9,15 @@ RUN install-php-extensions \
     intl \
     zip
 
+COPY ./Caddyfile.base /etc/caddy/Caddyfile
+COPY ./entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
 USER container
 ENV USER container
 ENV HOME /home/container
 
 WORKDIR /home/container
-
-COPY ./Caddyfile.base /etc/caddy/Caddyfile
-COPY ./entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
