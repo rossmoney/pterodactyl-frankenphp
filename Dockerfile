@@ -14,13 +14,6 @@ COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-USER container
-
-RUN \
-	# Add additional capability to bind to port 80 and 443
-	setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/frankenphp;
- 
-ENV USER container
 ENV HOME /home/container
 
 WORKDIR /home/container
